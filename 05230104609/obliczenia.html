@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staja paliw</title>
+    <link rel="stylesheet" href="styl2.css">
+</head>
+<body>
+    <section class="baner">
+        <h1>Całodobowa stacja paliw</h1>
+    </section>
+
+    <section class="menu">
+        <a href="stacja.html"><img src="home.png"></a>
+        <a href="obliczenia.html"><img src="znak.png"></a>
+        <a href="kwerendy.txt">Pobierz dokumenty</a>
+    </section>
+
+    <section class="lewy">
+        <h2>Orientacyjny koszt paliwa</h2>
+        Rodzaj paliwa (1-benzyna, 2-olej napędowy): <br>
+        <input type="number" id="inp1"> <br>
+        Ile litrów? <br>
+        <input type="number" id="inp2"> <br>
+        <button onclick="paliwo()" >OBLICZ</button>
+        <p id="skrypt"></p>
+    </section>
+
+    <section class="prawy">
+        <img class="samochod" src="samochod.png" alt="samochód">
+    </section>
+
+    <footer>
+        <p>Stronę opracowała: 05230104609</p>
+    </footer>
+</body>
+</html>
+
+<script>
+    function paliwo(){
+        inp1 = document.getElementById('inp1').value
+        inp2 = document.getElementById('inp2').value
+        skrypt.innerHTML = 'koszt paliwa: 0zł'
+
+        if(inp1 == '1'){
+            skrypt.innerHTML = 'koszt paliwa: ' + inp2*4 + 'zł'
+        }
+
+        if(inp1 == '2'){
+            skrypt.innerHTML = 'koszt paliwa: ' + inp2*3.5 + 'zł'
+        }
+    }
+</script>
